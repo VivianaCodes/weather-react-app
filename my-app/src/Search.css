@@ -1,0 +1,8 @@
+.btn-primary {
+  margin: 3px;
+  height: 35px;
+  width: 110px;
+  background: rgba(116, 211, 205);
+  color: black;
+  border-color: #ace4e0;
+}
