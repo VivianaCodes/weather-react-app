@@ -2,7 +2,7 @@ import React from "react";
 import "./Overview.css";
 import Date from "./Date";
 
-export default function Overview(props) {
+export default function Overview() {
   let weatherOverview = {
     city: "Naples",
     temperature: 18,
@@ -20,7 +20,7 @@ export default function Overview(props) {
           {weatherOverview.city}
         </h3>
         <div className="current-time">
-          <Date date={props.data.date} />
+          <Date />,
         </div>
         <h4>
           <span id="temp-number">{weatherOverview.temperature}</span>
