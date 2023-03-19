@@ -19,7 +19,7 @@ export default function Overview() {
         <h3 className="card-title" id="current-city">
           {weatherOverview.city}
         </h3>
-        <div class="current-time">
+        <div className="current-time">
           <Date />
         </div>
         <h4>
@@ -39,7 +39,7 @@ export default function Overview() {
           src={weatherOverview.imgUrl}
           alt=""
           id="weather-icon"
-          class="float-left"
+          className="float-left"
         />
         <span id="humidity">{weatherOverview.humidity}</span>
         <span id="wind">{weatherOverview.wind}</span>

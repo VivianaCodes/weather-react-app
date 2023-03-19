@@ -16,21 +16,21 @@ export default function Date(props) {
     "Nov",
     "Dec",
   ];
-  let day = days[props.getDay()];
-  let month = months[props.getMonth()];
-  let date = props.getDate();
-  let hour = props.getHours();
+  let day = props.date.getDay();
+  let month = props.date.getMonth();
+  let currentDate = props.date.getDate();
+  let hour = props.date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-  let minute = props.getMinutes();
+  let minute = props.date.getMinutes();
   if (minute < 10) {
     minute = `0${minute}`;
   }
   return (
     <div className="current-date">
       <p>
-        {day}, {month} {date} {hour}:{minute};
+        ({days[day]}, {months[month]} {currentDate} {hour}:{minute});
       </p>
     </div>
   );
