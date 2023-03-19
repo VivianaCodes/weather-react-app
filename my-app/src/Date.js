@@ -29,9 +29,9 @@ export default function Date(props) {
   }
   return (
     <div className="current-date">
-      <p>
+      <h5>
         ({days[day]}, {months[month]} {currentDate} {hour}:{minute});
-      </p>
+      </h5>
     </div>
   );
 }
