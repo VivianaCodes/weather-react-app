@@ -10,6 +10,17 @@ function App() {
         <Overview />
         <Search />
       </div>
+      <small>
+        <a
+          href="https://github.com/VivianaCodes/weather-react-app"
+          class="open-code"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open-source code
+        </a>{" "}
+        by Viviana Milone
+      </small>
     </div>
   );
 }
