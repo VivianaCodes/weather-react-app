@@ -1,8 +1,6 @@
 import React from "react";
 
-export default function Date() {
-  let now = new Date();
-
+export default function Date(props) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let months = [
     "Jan",
@@ -18,20 +16,22 @@ export default function Date() {
     "Nov",
     "Dec",
   ];
-  let day = days[now.getDay()];
-  let month = months[now.getMonth()];
-  let date = now.getDate();
-  let hour = now.getHours();
+  let day = days[props.getDay()];
+  let month = months[props.getMonth()];
+  let date = props.getDate();
+  let hour = props.getHours();
   if (hour < 10) {
-    hour = `0{hour}`;
+    hour = `0${hour}`;
   }
-  let minute = now.getMinutes();
+  let minute = props.getMinutes();
   if (minute < 10) {
-    minute = `0{minute}`;
+    minute = `0${minute}`;
   }
   return (
-    <p>
-      {day}, {month} {date} {hour}:{minute};
-    </p>
+    <div className="current-date">
+      <p>
+        {day}, {month} {date} {hour}:{minute};
+      </p>
+    </div>
   );
 }
