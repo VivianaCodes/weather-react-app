@@ -1,11 +1,11 @@
 import React from "react";
 import "./Overview.css";
+import Date from "./Date";
 
 export default function Overview() {
   let weatherOverview = {
     city: "Naples",
     temperature: 18,
-    date: "Sunday 18:14",
     humidity: 80,
     wind: 2,
     description: "Clear Sky",
@@ -19,7 +19,9 @@ export default function Overview() {
         <h3 className="card-title" id="current-city">
           {weatherOverview.city}
         </h3>
-        <div class="current-time">{weatherOverview.date}</div>
+        <div class="current-time">
+          <Date />
+        </div>
         <h4>
           <span id="temp-number">{weatherOverview.temperature}</span>
           <span className="units">
